@@ -1,0 +1,229 @@
+# CREAR CLASE
+
+class usuario:
+    
+    def init(self, nombre, apellido, n_d_cuenta, direccion, login, password):
+        self.nombre= nombre
+        self.apellido = apellido
+        self.n_d_cuenta= n_d_cuenta
+        self.direccion= direccion
+        self.login= login
+        self.password= password
+        
+    def enviar_sugerencia(self):
+        print("sugerencia enviada correctamente")
+    
+    def leer(self):
+        print("el usuario esta leyendo el contenido solicitado")
+    
+    def comprar(self):
+        print("compra realizada con exito")
+    
+    def vender(self):
+        print("venta registrada correctamente")
+    
+    def realizar_reclamacion(self):
+        print("reclamacion enviada. nuestro equipo la revisara pronto")  
+
+    def mostrar_datos(self):
+        print(f"(nombre: {self.nombre} {self.apellido}) - (cuenta: {self.n_d_cuenta}) - (direccion: {self.direccion}) - (datos del usuario: {self.login} {self.password}) ")
+    
+class producto:
+    def init(self,precio, titulo, autor, editorial, año_de_edicion, preferencias):
+        self.precio = precio
+        self.titulo = titulo
+        self.autor = autor
+        self.editorial = editorial
+        self.año_de_edicion = año_de_edicion
+        self.preferencias = preferencias
+        
+    def vender (self):
+        print(f"el producto {self.titulo} ha sido vendido por {self.precio}) ")
+        
+    def comprar (self):
+        print(f"has comprado el producto {self.titulo} , del autor {self.autor}) ")    
+        
+    def ver_catalogo (self):
+        print(f"catalogo de producto")    
+        print(f"titulo= {self.titulo}")
+        print(f"autor= {self.autor}")
+        print(f"editorial= {self.editorial}")
+        print(f"año_de_edicion= {self.año_de_edicion}")
+        print(f"precio= {self.precio}")
+        print(f"preferencias= {self.preferencias}")  
+
+class servidor: 
+    def mostrar_pagina(self):
+        return "https:/web.mislibros.com"
+        
+    def enviar_sugerencia(self):
+        return"sugerencia guardada..."
+    
+    def envia_datos_de_compra(self):
+        return"datos de compra guardados."       
+    
+    def envia_datos_de_venta(self):
+        return"datos de venta guardados."
+     
+     
+class indexador:
+    def actualiza_almacen(self):
+        return"actualizando datos del almacen....."
+    
+
+    def envia_resultado_busqueda(self):
+        return"procesando la solicitud de busqueda del usuario...." 
+        
+
+class procesador:
+    def mandar_datos_de_venta(self):
+        producto= input("ingrese el nombre del producto: ")
+        cantidad= int(input("ingrese la cantidad: "))
+        precio= float(input("ingrese el precio del producto: "))
+        total= cantidad*precio
+        print (f"producto: {producto}")
+        print (f"cantidad vendida: {cantidad} ")
+        print (f"precio: {precio} ")
+        print (f"total: {total}")
+                
+    def mandar_articulo_online(self):
+        print("procesando pedido....")
+        print("veridicando direccion de envio.... ")
+        print("empaquetando producto....")
+        print("enviando articulo al transportista...")
+        print("articulo enviado con exito.")
+        
+    def enviar_sugerencia_al_administrador(self):     
+        print(input("tiene alguna sugerencia para enviarnos?: "))
+        
+    def modificar_stock(self):
+        print("stock modificado correctamente. ")    
+        
+    def realizar_cobro(self): 
+        print("calculando el total de la compra...")
+        print("generando factura...")
+        print("cobro realizado correctamente.")        
+        
+    def realizar_pago(self):
+        print("procesando pago....")    
+        print("verificando datos del cliente.....")
+        print("pago realizado correctamente.")
+        
+    def actualizar_catalogo(self):
+        print("actualizando catalogo....")
+        print("catalogo actualizado correctamente. ") 
+        
+    def realizar_busqueda(self):
+        print("buscando producto en el catalogo...")
+        print("producto encontrado. ")
+        
+class hilo: 
+    def busca_novedades(self):
+        print("buscando productos nuevos y promociones...")
+        print("se encontraron 3 novedades disponibles.")  
+            
+class recolector:
+    def envia_novedades(self):
+        print("enviando novedades a los clientes...") 
+        print("novedades enviadas correctamente. ")
+        
+class editorial:
+    def init(self, nombre, direccion, telefono):
+        self.nombre= nombre
+        self.direccion= direccion
+        self.telefono= telefono
+        
+    def vender(self):
+        print(f"(nombre: {self.nombre}) - (direccion: {self.direccion}) - (telefono: {self.telefono})")
+        print("recopilando informacion del cliente...")
+        print("venta realizada correctamente.")    
+        
+class libro:
+    def init(self, genero):
+        self.genero= genero
+        
+class revista:
+    def init(self, categoria):
+        self.categoria=categoria
+        
+class articulo_de_segunda_mano:
+    def init(self, clasificacion, tema, vendedor):
+        self.clasificacion=clasificacion
+        self.tema=tema
+        self.vendedor=vendedor
+        
+    def mostrar_datos_articulo(self):
+        print(f"clasificacion: {self.clasificacion}")
+        print(f"tema: {self.tema}")
+        print(f"vendedor: {self.vendedor}")
+        
+class novedades:
+    def init(self, clasificacion, tema):
+        self.clasificacion=clasificacion
+        self.tema=tema
+        
+    def mostrar_novedades(self, nueva_calsificacion):
+        print("cambiando clasificacion...")
+        self.clasificacion= nueva_calsificacion
+        print(f"la nueva clasificacion es: {self.clasificacion} ")
+        
+class articulo_online:
+    def init(self, tema):
+        self.tema=tema
+        
+    def publicar(self):
+        print("publicando articulo en linea...")
+        print(f"el articulo sobre {self.tema} ha sido publicado exitosamente.")
+             
+# CODIGO PRINCIPAL
+    
+obj_usuario = usuario("luis", "díaz", "1234568", "patios", "lu_234,", " 1345788")
+obj_usuario.mostrar_datos()
+obj_usuario.enviar_sugerencia()
+obj_usuario.leer()
+obj_usuario.comprar()
+obj_usuario.vender()
+obj_usuario.realizar_reclamacion()
+obj_producto = producto(precio= "149.000", titulo= "cien años de soledad",  autor= "gabriel garcia marquez", editorial="editorial sudamericana", año_de_edicion="1967", preferencias="novela latinoamericana")
+obj_producto.vender()
+obj_producto.comprar()
+obj_producto.ver_catalogo()
+obj_servidor = servidor()
+mostrar= obj_servidor.mostrar_pagina()
+print(mostrar)
+sug= obj_servidor.enviar_sugerencia()
+print(sug)
+datos= obj_servidor.envia_datos_de_compra()
+print(datos)
+venta= obj_servidor.envia_datos_de_venta()
+print(venta)
+obj_indexador= indexador()
+actualizar= obj_indexador.actualiza_almacen()
+print(actualizar)
+enviar=obj_indexador.envia_resultado_busqueda()
+print(enviar)
+obj_datos= procesador()
+obj_datos.mandar_datos_de_venta()
+obj_datos.mandar_articulo_online()
+obj_datos.enviar_sugerencia_al_administrador()
+obj_datos.modificar_stock()
+obj_datos.realizar_cobro()
+obj_datos.realizar_pago()
+obj_datos.actualizar_catalogo()
+obj_datos.realizar_busqueda()
+obj_hilo= hilo()
+obj_hilo.busca_novedades()
+obj_recolector= recolector()
+obj_recolector.envia_novedades()
+obj_editorial= editorial("luis", "av 12", "32099856")
+obj_editorial.vender()
+obj_libro= libro("")
+print("genero del libro: ", obj_libro.genero)
+obj_revista= revista("literatura")
+print("categoria: ", obj_revista.categoria)
+obj_articulo= articulo_de_segunda_mano("realismo magico", "obra literaria", "libreria central")
+obj_articulo.mostrar_datos_articulo()
+obj_novedad= novedades("ficcion", "lanzamientos literarios")
+obj_novedad.mostrar_novedades("realismo magico")
+obj_art_online= articulo_online("nuevas tendencias en literatura digital")
+obj_art_online.publicar()
